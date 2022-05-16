@@ -19,22 +19,22 @@ set(CMAKE_SKIP_BUILD_RPATH FALSE)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
 # Set sources
-set(SRC cutefish-appmotor.cpp)
+set(SRC yoyo-appmotor.cpp)
 
 # Set libraries to be linked.
 link_libraries("-L../launcherlib -lapplauncherd" ${LIBDL})
 
 # Set executable
-add_executable(cutefish-appmotor ${SRC} ${MOC_SRC})
+add_executable(yoyo-appmotor ${SRC} ${MOC_SRC})
 
-target_link_libraries(cutefish-appmotor
+target_link_libraries(yoyo-appmotor
     Qt5::Widgets
     Qt5::Quick
 )
 
 # Add install rule
-install(TARGETS cutefish-appmotor DESTINATION ${CMAKE_INSTALL_FULL_BINDIR})
+install(TARGETS yoyo-appmotor DESTINATION ${CMAKE_INSTALL_FULL_BINDIR})
 
 if(INSTALL_SYSTEMD_UNITS)
-	install(FILES cutefish-appmotor.service DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/systemd/user/)
+	install(FILES yoyo-appmotor.service DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/systemd/user/)
 endif()

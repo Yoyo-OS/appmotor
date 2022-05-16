@@ -17,24 +17,24 @@
 **
 ****************************************************************************/
 
-#ifndef CUTEFISH_APPMOTOR_H
-#define CUTEFISH_APPMOTOR_H
+#ifndef YOYO_APPMOTOR_H
+#define YOYO_APPMOTOR_H
 
 #include "booster.h"
 
 /*!
- * \class CutefishBooster.
+ * \class YoyoBooster.
  * \brief Qt-specific version of the Booster.
  */
-class CutefishBooster : public Booster
+class YoyoBooster : public Booster
 {
 public:
 
     //! Constructor.
-    CutefishBooster() {};
+    YoyoBooster() {};
 
     //! Destructor.
-    virtual ~CutefishBooster() {};
+    virtual ~YoyoBooster() {};
 
     //! \reimp
     virtual const string & boosterType() const;
@@ -53,10 +53,10 @@ protected:
 private:
 
     //! Disable copy-constructor
-    CutefishBooster(const CutefishBooster & r);
+    YoyoBooster(const YoyoBooster & r);
 
     //! Disable assignment operator
-    CutefishBooster & operator= (const CutefishBooster & r);
+    YoyoBooster & operator= (const YoyoBooster & r);
 
     static const string m_boosterType;
 };

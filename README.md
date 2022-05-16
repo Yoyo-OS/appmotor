@@ -1,6 +1,6 @@
-# Cutefish AppMotor
+# Yoyo AppMotor
 
-Optimize the speed of starting cutefish apps.
+Optimize the speed of starting yoyo apps.
 
 ## Dependencies
 

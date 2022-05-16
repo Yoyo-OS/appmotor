@@ -17,7 +17,7 @@
 **
 ****************************************************************************/
 
-#include "cutefish-appmotor.h"
+#include "yoyo-appmotor.h"
 #include "daemon.h"
 
 #include <unistd.h>
@@ -27,14 +27,14 @@
 #include <QApplication>
 #include <QDebug>
 
-const string CutefishBooster::m_boosterType = "cutefish";
+const string YoyoBooster::m_boosterType = "yoyo";
 
-const string & CutefishBooster::boosterType() const
+const string & YoyoBooster::boosterType() const
 {
     return m_boosterType;
 }
 
-int CutefishBooster::launchProcess()
+int YoyoBooster::launchProcess()
 {
     Booster::setEnvironmentBeforeLaunch();
 
@@ -58,14 +58,14 @@ int CutefishBooster::launchProcess()
     return EXIT_FAILURE;
 }
 
-void CutefishBooster::initialize(int initialArgc, char **initialArgv, int boosterLauncherSocket,
+void YoyoBooster::initialize(int initialArgc, char **initialArgv, int boosterLauncherSocket,
                            int socketFd, SingleInstance *singleInstance, bool bootMode)
 {
     new QApplication(initialArgc, initialArgv);
     Booster::initialize(initialArgc, initialArgv, boosterLauncherSocket, socketFd, singleInstance, bootMode);
 }
 
-bool CutefishBooster::preload()
+bool YoyoBooster::preload()
 {
     QQuickView window;
     window.create();
@@ -75,7 +75,7 @@ bool CutefishBooster::preload()
 
 int main(int argc, char **argv)
 {
-    CutefishBooster *booster = new CutefishBooster;
+    YoyoBooster *booster = new YoyoBooster;
 
     Daemon d(argc, argv);
     d.run(booster);
