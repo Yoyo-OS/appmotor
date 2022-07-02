@@ -4,9 +4,11 @@ Priority: optional
 Maintainer: YoyoOS <yoyoos@foxmail.com>
 Build-Depends: cmake,
                debhelper (>= 9),
-			         qtbase5-dev,
+               extra-cmake-modules,
+               qtbase5-dev,
                qtdeclarative5-dev,
                qtquickcontrols2-5-dev,
+               libglib2.0-dev,
                libsystemd-dev,
                libcap-dev,
                libdbus-1-dev
